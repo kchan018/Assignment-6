@@ -25,6 +25,10 @@ pool <- data.frame('lon' = -4.553974, 'lat' = 50.83257)
 castle <- data.frame('lon' = -4.548768, 'lat' = 50.82903)
 # Pub
 barrel <- data.frame('lon' = -4.543023, 'lat' = 50.83007)
+
+## Hotels (Added by Steven)
+falcon <- data.frame('lon' = -4.547858, 'lat' = 50.82697)
+atlantic <- data.frame('lon' = --4.548378, 'lat' =  50.8314)
 ```
 
 # Bude Road Map With All the Points of Interest
@@ -38,7 +42,10 @@ ggmap(budemap_road) +
   geom_point(aes(x = lon, y = lat), data = cricket, color = "green", size = 2) + 
   geom_point(aes(x = lon, y = lat), data = pool, color = "purple", size = 2) + 
   geom_point(aes(x = lon, y = lat), data = castle, color = "gray", size = 2) + 
-  geom_point(aes(x = lon, y = lat), data = barrel, color = "yellow", size = 2)
+  geom_point(aes(x = lon, y = lat), data = barrel, color = "yellow", size = 2)+
+  # Hotels added 
+  geom_point(aes(x = lon, y = lat), data = falcon, color = "orange", size = 2)+
+  geom_point(aes(x = lon, y = lat), data = atlantic, color = "orange", size = 2)
 ```
 
 # Bude Watercolor Map With All Points of Interest
@@ -68,7 +75,7 @@ ggmap(budemap_road) +
 # More Information About Points of Interest
 
 
-![Summerleaze Beach (marked by the brown dot on both maps) is less than a five-minute walk from the centre of Bude, and it is a beach that is particularly popular for families and surfers. For those wanting to do an overnight stay, Summerleaze's Beach Huts are bookable daily or weekly from £10 - £20 per day. https://www.visitcornwall.com/beaches/lifeguards-seasonal/north-coast/bude/summerleaze-beach](/Users/Kevin Chan/Documents/BU Courses/MA415/Assignment-6/Summerleaze Beach.jpg)
+![Summerleaze Beach (marked by the brown dot on both maps) is less than a five-minute walk from the centre of Bude, and it is a beach that is particularly popular for families and surfers. For those wanting to do an overnight stay, Summerleaze's Beach Huts are bookable daily or weekly from ?10 - ?20 per day. https://www.visitcornwall.com/beaches/lifeguards-seasonal/north-coast/bude/summerleaze-beach](/Users/Kevin Chan/Documents/BU Courses/MA415/Assignment-6/Summerleaze Beach.jpg)
 
 
 
@@ -85,3 +92,18 @@ ggmap(budemap_road) +
 ![The Castle Bude (marked by the gray dot on both maps) is another popular attraction in town. Built in 1830 by Sir Goldsworthy Gurney, it was built on sand using a concrete raft foundation, which makes this castle unique from others in the UK. Admission to the Heritage Centre and Galleries is free. http://thecastlebude.org.uk/about-us/](/Users/Kevin Chan/Documents/BU Courses/MA415/Assignment-6/The Castle Bude.jpg)
 
 ![The Barrel at Bude (marked by the yellow dot on both maps) is the only one in Bude to sell Cornish craft ales and ciders directly from the barrel. It also serves a selection of Cornish wines and gins. There is live music every Sunday and monthly poetry nights here. https://www.visitbude.info/eating/drinking/the-barrel-at-bude/](/Users/Kevin Chan/Documents/BU Courses/MA415/Assignment-6/The Barrel.jpg)
+
+The Falcon Hotel is built in 1798 and located near Bude's historical canal. Only a 5 minute walk from the Bude Castle and 7 minute walk from Summerleaze beach, the Falcon Hotel is a great and convenient dwelling during your stay in Bude.
+
+```{R}
+library(jpeg)
+plot(1:10, type="n", yaxt = "n", xaxt = "n", xlab = "", ylab = "")
+rasterImage(readJPEG("The Falcon Hotel.jpg"),0,0,10.5,10.5)
+```
+
+Alternatively, the Atlantic House Hotel is located a little closer to the Summerleaze beach. Featuring free wifi, flatscreen TV's, and tea and coffee making facilities, the Atlantic House hotel poses considerable service to it guest and occupants. 
+
+```{R}
+plot(1:10, type="n", yaxt = "n", xaxt = "n", xlab = "", ylab = "")
+rasterImage(readJPEG("The Atlantic House.jpg"),0,0,10.5,10.5)
+```
