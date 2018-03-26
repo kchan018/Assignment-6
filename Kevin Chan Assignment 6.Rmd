@@ -14,6 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 library(ggmap)
 library(tidyverse)
+library(jpeg)
 # Bude, UK
 bude <- data.frame('lon' = -4.543678, 'lat' = 50.82664)
 # Beaches
@@ -75,28 +76,50 @@ ggmap(budemap_road) +
 # More Information About Points of Interest
 
 
-![Summerleaze Beach (marked by the brown dot on both maps) is less than a five-minute walk from the centre of Bude, and it is a beach that is particularly popular for families and surfers. For those wanting to do an overnight stay, Summerleaze's Beach Huts are bookable daily or weekly from ?10 - ?20 per day. https://www.visitcornwall.com/beaches/lifeguards-seasonal/north-coast/bude/summerleaze-beach](/Users/Kevin Chan/Documents/BU Courses/MA415/Assignment-6/Summerleaze Beach.jpg)
+Summerleaze Beach (marked by the brown dot on both maps) is less than a five-minute walk from the centre of Bude, and it is a beach that is particularly popular for families and surfers. For those wanting to do an overnight stay, Summerleaze's Beach Huts are bookable daily or weekly from ?10 - ?20 per day. https://www.visitcornwall.com/beaches/lifeguards-seasonal/north-coast/bude/summerleaze-beach
+```{r}
+plot(1:10, type="n", yaxt = "n", xaxt = "n", xlab = "", ylab = "")
+rasterImage(readJPEG("Summerleaze Beach.jpg"),0,0,10.5,10.5)
+```
 
+Crooklets Beach (marked by the red dot on both maps) is a beach with a huge expanse of golden sand and rock pools. Popular for families and surfers, especially families that prefer a beach without dogs. https://www.visitbude.info/for-beach-lovers/beaches/crooklets-beach/
 
+```{r}
+plot(1:10, type="n", yaxt = "n", xaxt = "n", xlab = "", ylab = "")
+rasterImage(readJPEG("Crooklets Beach.jpg"),0,0,10.5,10.5)
+```
 
-![Crooklets Beach (marked by the red dot on both maps) is a beach with a huge expanse of golden sand and rock pools. Popular for families and surfers, especially families that prefer a beach without dogs. https://www.visitbude.info/for-beach-lovers/beaches/crooklets-beach/](/Users/Kevin Chan/Documents/BU Courses/MA415/Assignment-6/Crooklets Beach.jpg)
+Bude North Cornwall Cricket Ground (marked by the green dot on both maps) was founded in 1870. It has had many uses throughout history, including playing host to hockey matches, tennis and cricket tournaments, and even Mortar practice during World War 2. Today, it serves both recreational and competitive cricket matches. http://budecc.play-cricket.com/
 
+```{r}
+plot(1:10, type="n", yaxt = "n", xaxt = "n", xlab = "", ylab = "")
+rasterImage(readJPEG("Cricket Grounds.jpg"),0,0,10.5,10.5)
+```
 
-![Bude North Cornwall Cricket Ground (marked by the green dot on both maps) was founded in 1870. It has had many uses throughout history, including playing host to hockey matches, tennis and cricket tournaments, and even Mortar practice during World War 2. Today, it serves both recreational and competitive cricket matches. http://budecc.play-cricket.com/](/Users/Kevin Chan/Documents/BU Courses/MA415/Assignment-6/Cricket Grounds.jpg)
+Bude Sea Pool, also known as the Bude Tidal Swimming Pool (marked by the purple dot on both maps), is a semi-natural pool providing a free and safe space for various water-based activities since the 1930s. Almost 50,000 people visit Bude Sea Pool every year, which makes it the number one visitor attraction in town. There is no admission charge for the pool. http://www.budeseapool.org/
 
+```{r}
+plot(1:10, type="n", yaxt = "n", xaxt = "n", xlab = "", ylab = "")
+rasterImage(readJPEG("Sea-Pool-201.jpg"),0,0,10.5,10.5)
+```
 
+The Castle Bude (marked by the gray dot on both maps) is another popular attraction in town. Built in 1830 by Sir Goldsworthy Gurney, it was built on sand using a concrete raft foundation, which makes this castle unique from others in the UK. Admission to the Heritage Centre and Galleries is free. http://thecastlebude.org.uk/about-us/
 
-![Bude Sea Pool, also known as the Bude Tidal Swimming Pool (marked by the purple dot on both maps), is a semi-natural pool providing a free and safe space for various water-based activities since the 1930s. Almost 50,000 people visit Bude Sea Pool every year, which makes it the number one visitor attraction in town. There is no admission charge for the pool. http://www.budeseapool.org/](/Users/Kevin Chan/Documents/BU Courses/MA415/Assignment-6/Sea-Pool-201.jpg)
+```{r}
+plot(1:10, type="n", yaxt = "n", xaxt = "n", xlab = "", ylab = "")
+rasterImage(readJPEG("The Castle Bude.jpg"),0,0,10.5,10.5)
+```
 
+The Barrel at Bude (marked by the yellow dot on both maps) is the only one in Bude to sell Cornish craft ales and ciders directly from the barrel. It also serves a selection of Cornish wines and gins. There is live music every Sunday and monthly poetry nights here. https://www.visitbude.info/eating/drinking/the-barrel-at-bude
 
-![The Castle Bude (marked by the gray dot on both maps) is another popular attraction in town. Built in 1830 by Sir Goldsworthy Gurney, it was built on sand using a concrete raft foundation, which makes this castle unique from others in the UK. Admission to the Heritage Centre and Galleries is free. http://thecastlebude.org.uk/about-us/](/Users/Kevin Chan/Documents/BU Courses/MA415/Assignment-6/The Castle Bude.jpg)
-
-![The Barrel at Bude (marked by the yellow dot on both maps) is the only one in Bude to sell Cornish craft ales and ciders directly from the barrel. It also serves a selection of Cornish wines and gins. There is live music every Sunday and monthly poetry nights here. https://www.visitbude.info/eating/drinking/the-barrel-at-bude/](/Users/Kevin Chan/Documents/BU Courses/MA415/Assignment-6/The Barrel.jpg)
+```{r}
+plot(1:10, type="n", yaxt = "n", xaxt = "n", xlab = "", ylab = "")
+rasterImage(readJPEG("The Barrel.jpg"),0,0,10.5,10.5)
+```
 
 The Falcon Hotel is built in 1798 and located near Bude's historical canal. Only a 5 minute walk from the Bude Castle and 7 minute walk from Summerleaze beach, the Falcon Hotel is a great and convenient dwelling during your stay in Bude.
 
 ```{R}
-library(jpeg)
 plot(1:10, type="n", yaxt = "n", xaxt = "n", xlab = "", ylab = "")
 rasterImage(readJPEG("The Falcon Hotel.jpg"),0,0,10.5,10.5)
 ```
